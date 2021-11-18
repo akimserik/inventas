@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Inventas - аутсорсинг инвентаризации товаров"
+    />
+
+    <title>Inventas</title>
+
+    <link rel="stylesheet" type="text/css" href="./vendors/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./vendors/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/css/queries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/resources/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/resources/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/resources/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/resources/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/resources/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/resources/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="/resources/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="row">
+          <img
+            src="resources/img/Inventas-white-transparent.svg"
+            alt="Logo"
+            class="logo"
+          />
+          <img
+            src="resources/img/Inventas-black-transparent.svg"
+            alt="Logo"
+            class="logo-black"
+          />
+          <ul class="main-nav js--main-nav">
+            <li><a href="#features">Услуги</a></li>
+            <li><a href="#steps">О нас</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+          <a class="mobile-nav-icon js--nav-icon"
+            ><ion-icon name="menu"></ion-icon
+          ></a>
+        </div>
+      </nav>
+      <div class="hero-text-box">
+        <h1 class="h-white">Профессиональный аутсорсинг</h1>
+        <h3 class="h-white">
+          в сфере налогов, бухгалтерского учета и информационных технологий
+        </h3>
+        <a href="#" class="btn btn-full js--scroll-to-prices">Подробнее</a>
+        <a href="#" class="btn btn-ghost js--scroll-to-contacts"
+          >Оставить заявку</a
+        >
+      </div>
+    </header>
+
+    <section class="section-features js--section-features" id="features">
+      <div class="row" style="text-align: center">
+        <h2>Наши услуги</h2>
+        <p class="long-copy">
+          Мы помогаем решать ваши ежедневные вопросы, используя передовой опыт,
+          накопленный за годы работы в компаниях большой четверки
+        </p>
+      </div>
+      <div class="row js--wp-1">
+        <div class="col span-1-of-3 box">
+          <ion-icon name="calculator-outline" class="icon-big"></ion-icon>
+          <h3 class="h-bold">Налоги и бухгалтерский учет</h3>
+          <p>
+            Консультации по налогам. Ведение бухгалтерского и кадрового учета
+            для филиалов и представительств зарубежных компаний.
+          </p>
+        </div>
+
+        <div class="col span-1-of-3 box">
+          <ion-icon name="bag-handle-outline" class="icon-big"></ion-icon>
+          <h3 class="h-bold">Независимая инвентаризация</h3>
+          <p>
+            Проводим ревизии в магазинах и бутиках по Казахстану с
+            использованием современных технологий считывания штрих-кодов.
+          </p>
+        </div>
+
+        <div class="col span-1-of-3 box">
+          <ion-icon name="desktop-outline" class="icon-big"></ion-icon>
+          <h3 class="h-bold">Информационные технологии</h3>
+          <p>
+            Автоматизация розничной торговли, внедрение учетных систем 1С и
+            процессов штрихкодирования товаров и основных средств.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-stocktake">
+      <ul class="stocktake-showcase clearfix">
+        <li>
+          <!--container with image and caption-->
+          <figure class="stocktake-photo">
+            <img src="resources/img/1.JPG" alt="scanner" />
+          </figure>
+        </li>
+
+        <li>
+          <!--container with image and caption-->
+          <figure class="stocktake-photo">
+            <img src="resources/img/2.JPG" alt="double-team" />
+          </figure>
+        </li>
+
+        <li>
+          <!--container with image and caption-->
+          <figure class="stocktake-photo">
+            <img src="resources/img/3.JPG" alt="alone" />
+          </figure>
+        </li>
+
+        <li>
+          <!--container with image and caption-->
+          <figure class="stocktake-photo">
+            <img src="resources/img/4.JPG" alt="couple" />
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section-steps" id="steps">
+      <div class="row">
+        <h2>Как это работает</h2>
+      </div>
+      <div class="row">
+        <div class="col span-1-of-2 steps-box">
+          <img
+            src="resources/img/scanner.jpg"
+            alt="Scanner photo"
+            class="steps-photo"
+          />
+        </div>
+        <div class="col span-1-of-2 steps-box">
+          <div class="works-step">
+            <div class="step-number">1</div>
+            <p>
+              Проверка осуществимости инвентаризации на объекте и ознакомление с
+              товарами.
+            </p>
+          </div>
+
+          <div class="works-step">
+            <div class="step-number">2</div>
+            <p>Тестирование выгрузки/загрузки данных в учетную систему.</p>
+          </div>
+
+          <div class="works-step">
+            <div class="step-number">3</div>
+            <p>Составление карты локации и маркировка зон подсчета.</p>
+          </div>
+
+          <div class="works-step">
+            <div class="step-number">4</div>
+            <p>Передача результатов в заранее оговоренном формате.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-feedback">
+      <div class="row">
+        <h2>Отзывы клиентов</h2>
+      </div>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <blockquote>
+            Благодаря Inventas мы больше не отвлекаем своих продавцов на
+            инвентаризацию. Мы уверены, что остатки будут посчитаны точно и в
+            срок, а результаты сразу отразятся в системе 1С.
+          </blockquote>
+          <cite
+            ><img src="./resources/img/anel.jpg" alt="MyPerfectDress" />Анель
+            Тулегенова, MyPerfectDress</cite
+          >
+        </div>
+
+        <div class="col span-1-of-2">
+          <blockquote>
+            Ребята помогли нам наладить систему с нуля: внедрили 1С, объяснили
+            принципы штрихкодирования, наладили процесс стикеровки. Делать
+            инвентаризацию стало легко и просто.
+          </blockquote>
+          <cite
+            ><img
+              src="./resources/img/client2.jfif"
+              alt="MyPerfectDress"
+            />Татьяна Сурганова, Cruno Store</cite
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section-prices js--section-prices">
+      <div class="row">
+        <h2>Цены на инвентаризацию</h2>
+      </div>
+      <div class="row">
+        <div class="col span-1-of-3">
+          <div class="price-box">
+            <div>
+              <h3>Small</h3>
+              <p class="price"><span>от</span> 79 000 <span>тг.</span></p>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >небольшой бутик
+                </li>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >до 2 тыс. единиц товара
+                </li>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >до 4 часов работы
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col span-1-of-3">
+          <div class="price-box">
+            <div>
+              <h3>Medium</h3>
+              <p class="price"><span>от</span> 119 000 <span>тг.</span></p>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >средний магазин
+                </li>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >3-5 тыс. единиц товара
+                </li>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >до 8 часов работы
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col span-1-of-3">
+          <div class="price-box">
+            <div>
+              <h3>Large</h3>
+              <p class="price"><span>от</span> 299 000 <span>тг.</span></p>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >несколько складов в бутике
+                </li>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >от 5 тыс. единиц товара
+                </li>
+                <li>
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="icon-small"
+                  ></ion-icon
+                  >более 8 часов работы
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-form js--section-contacts" id="contacts">
+      <div class="row">
+        <h2>Свяжитесь с нами</h2>
+      </div>
+
+      <div class="row">
+        <form method="POST" action="#" class="contact-form">
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="name">Name</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="ваше имя"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="email">Email</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="ваш email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="find-us">Как вы узнали о нас?</label>
+            </div>
+            <div class="col span-2-of-3">
+              <select name="find-us" id="find-us">
+                <option value="recommend">рекомендация друзей/коллег</option>
+                <option value="advertise" selected>реклама в интернете</option>
+                <option value="other">другое</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="news">Подписаться на рассылку?</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="checkbox" name="news" id="news" checked />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="message">Сообщение</label>
+            </div>
+            <div class="col span-2-of-3">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="введите сообщение"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label>&nbsp;</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="submit" value="Отправить" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <ul class="footer-nav">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">iOS App</a></li>
+            <li><a href="#">Android App</a></li>
+          </ul>
+        </div>
+        <div class="col span-1-of-2">
+          <ul class="social-links">
+            <li>
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <p>Inventas &copy; 2021</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./resources/js/script.js"></script>
+    <script src="./vendors/js/jquery.waypoints.min.js"></script>
+  </body>
+</html>

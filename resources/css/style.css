@@ -1,0 +1,594 @@
+/*
+Main color (orange): #e67e22
+*/
+
+/* ------------------------------------------------------------- */
+/* BASIC SETUP */
+/* ------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ffffff;
+  color: #555555;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* ------------------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------------------- */
+
+.row {
+  max-width: 1140px;
+  /*to center content of the row*/
+  margin: 0 auto;
+}
+
+section {
+  /*better to do whitespace using padding not margin - to preserve nice background color in future*/
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+/* -----HEADINGS----- */
+.h-white {
+  color: #ffffff;
+}
+
+.h-bold {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 1px;
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h1 {
+  /*font size in relation to global settings (html)*/
+  font-size: 300%;
+  word-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h2 {
+  /*font size in relation to global settings (html)*/
+  font-size: 200%;
+  word-spacing: 3px;
+  text-align-last: center;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  /*mandatory to put at least blank space content to "after"-type style*/
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 100%;
+  word-spacing: 2px;
+}
+
+/* -----PARAGRAPHS----- */
+.long-copy {
+  /*best practice: typography*/
+  line-height: 145%;
+  /*another way to center the text - by playing with margins - 15% left will generate automatic 15% on the rignt*/
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/* -----ICONS----- */
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: #cf6d22;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  max-width: 5%;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+/* -----LINKS----- */
+a:link,
+a:visited {
+  color: #cf6d22;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #cf6d22;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+/* -----BUTTONS----- */
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  /*to enable padding/margin for element - make it inline-block */
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #cf6d17;
+  border: 1px solid #cf6d17;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  color: #ffffff;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #cf6d17;
+  border: 1px solid #cf6d17;
+}
+
+.btn-full,
+input[type="submit"] {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #ffffff;
+  margin-right: 15px;
+}
+
+.btn-ghost {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------------- */
+/* HEADER */
+/* ------------------------------------------------------------- */
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/hero1.jpg);
+  /*to see the whole image - fit to screen and center*/
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /*pic stays fixed on scroll page - nice effect*/
+  background-attachment: fixed;
+}
+
+.hero-text-box {
+  /*to place the text in the center of the screen*/
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  float: left;
+  margin-top: 30px;
+}
+
+.logo-black {
+  height: 50px;
+  margin: 5px 0;
+  display: none;
+  width: auto;
+  float: left;
+}
+
+/* MAIN NAVI */
+
+.main-nav {
+  float: right;
+  /*avoid bullet points in ul*/
+  list-style: none;
+  margin-top: 40px;
+}
+
+.main-nav li {
+  /*display items side-by-side not in new rows*/
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  font-weight: 400;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
+
+/* STICKY NAVI */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.986);
+  box-shadow: 0 2px 2px #efefef;
+  padding: 0.5%;
+  z-index: 9999;
+}
+
+.sticky .logo {
+  display: none;
+}
+.sticky .logo-black {
+  display: block;
+  margin-top: 10px;
+}
+
+.sticky .main-nav {
+  margin-top: 20px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  padding: 15px 0;
+  color: #555;
+}
+
+/* MOBILE NAV */
+.mobile-nav-icon {
+  float: right;
+  margin-top: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav-icon ion-icon {
+  font-size: 200%;
+  color: #ffff;
+}
+
+/* ------------------------------------------------------------- */
+/* FEATURES */
+/* ------------------------------------------------------------- */
+
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+/* ------------------------------------------------------------- */
+/* STOCKTAKE PHOTOS */
+/* ------------------------------------------------------------- */
+
+.section-stocktake {
+  padding: 0;
+}
+
+.stocktake-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.stocktake-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.stocktake-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.stocktake-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.stocktake-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* ------------------------------------------------------------- */
+/* SECTION HOW IT WORKS */
+/* ------------------------------------------------------------- */
+.section-steps {
+  background-color: #f4f4f4;
+}
+
+.steps-box {
+  margin-top: 30px;
+}
+
+.steps-box:first-child {
+  text-align: center;
+  padding-right: 3%;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+}
+
+.steps-photo {
+  width: 60%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+
+.step-number {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  /*display: inline-block;*/
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+/* ------------------------------------------------------------- */
+/* SECTION FEEDBACK */
+/* ------------------------------------------------------------- */
+
+.section-feedback {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(/resources/img/customers-background.JPG);
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote::before {
+  content: "\201C";
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ------------------------------------------------------------- */
+/* SECTION PRICES */
+/* ------------------------------------------------------------- */
+
+.section-prices {
+  background-color: #f4f4f4;
+}
+
+.price-box {
+  background-color: #fff;
+  border-radius: 5px;
+  /* margin left is remaining from 100% - 90% width */
+  width: 90%;
+  margin-left: 10%;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px #efefef;
+}
+
+.price-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.price-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.price-box div:last-child {
+  border: none;
+}
+
+.price {
+  font-size: 180%;
+  font-weight: 200;
+  margin-bottom: 10px;
+  color: #cf6d22;
+}
+
+.price span {
+  font-size: 50%;
+}
+
+.price-box ul {
+  list-style: none;
+}
+
+.price-box li {
+  padding: 5px 0;
+}
+
+/* ------------------------------------------------------------- */
+/* SECTION CONTACT US */
+/* ------------------------------------------------------------- */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+/* ------------------------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------------------------- */
+
+footer {
+  background-color: #333;
+  padding: 50px;
+  font-size: 80%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 180%;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active {
+  color: #ddd;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 30px;
+}
+
+/* ------------------------------------------------------------- */
+/* ANIMATIONS */
+/* ------------------------------------------------------------- */
+
+.js--wp-1 {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+.js--wp-1.animated {
+  opacity: 1;
+}
